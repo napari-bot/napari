@@ -101,7 +101,7 @@ imageio==2.34.2
     #   scikit-image
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==8.1.0
+importlib-metadata==8.2.0
     # via dask
 in-n-out==0.2.1
     # via app-model
@@ -228,7 +228,7 @@ nvidia-cuda-nvrtc-cu12==12.1.105
     # via torch
 nvidia-cuda-runtime-cu12==12.1.105
     # via torch
-nvidia-cudnn-cu12==8.9.2.26
+nvidia-cudnn-cu12==9.1.0.70
     # via torch
 nvidia-cufft-cu12==11.0.2.54
     # via torch
@@ -445,7 +445,7 @@ rich==13.7.1
     #   npe2
     #   pytest-pretty
     #   typer
-rpds-py==0.19.0
+rpds-py==0.19.1
     # via
     #   jsonschema
     #   referencing
@@ -499,7 +499,7 @@ tensorstore==0.1.63
     # via
     #   -r napari_repo/resources/constraints/version_denylist.txt
     #   napari (napari_repo/pyproject.toml)
-tifffile==2024.7.21
+tifffile==2024.7.24
     # via
     #   napari (napari_repo/pyproject.toml)
     #   scikit-image
@@ -510,7 +510,7 @@ toolz==0.12.1
     #   napari (napari_repo/pyproject.toml)
     #   dask
     #   partd
-torch==2.3.1
+torch==2.4.0
     # via napari (napari_repo/pyproject.toml)
 tornado==6.4.1
     # via
@@ -529,7 +529,7 @@ traitlets==5.14.3
     #   qtconsole
 triangle==20230923
     # via napari (napari_repo/pyproject.toml)
-triton==2.3.1
+triton==3.0.0
     # via torch
 typer==0.12.3
     # via npe2
