@@ -90,9 +90,9 @@ heapdict==1.0.1
     # via cachey
 hsluv==5.0.4
     # via vispy
-hypothesis==6.111.1
+hypothesis==6.111.2
     # via napari (napari_repo/pyproject.toml)
-idna==3.7
+idna==3.8
     # via requests
 imageio==2.35.1
     # via
@@ -193,7 +193,7 @@ numba==0.60.0
     # via napari (napari_repo/pyproject.toml)
 numcodecs==0.13.0
     # via zarr
-numpy==2.0.1
+numpy==2.0.2
     # via
     #   napari (napari_repo/pyproject.toml)
     #   contourpy
@@ -342,7 +342,7 @@ pyopengl==3.1.6
     # via
     #   -r napari_repo/resources/constraints/version_denylist.txt
     #   napari (napari_repo/pyproject.toml)
-pyparsing==3.1.2
+pyparsing==3.1.4
     # via matplotlib
 pyperclip==1.9.0
     # via mouseinfo
@@ -362,7 +362,7 @@ pyqt6-sip==13.8.0
     # via pyqt6
 pyrect==0.2.0
     # via pygetwindow
-pyscreeze==0.1.30
+pyscreeze==1.0.1
     # via pyautogui
 pytest==8.3.2
     # via
@@ -400,7 +400,7 @@ pyyaml==6.0.2
     #   napari (napari_repo/pyproject.toml)
     #   dask
     #   npe2
-pyzmq==26.1.1
+pyzmq==26.2.0
     # via
     #   ipykernel
     #   jupyter-client
@@ -426,7 +426,7 @@ requests==2.32.3
     #   pooch
     #   pyconify
     #   sphinx
-rich==13.7.1
+rich==13.8.0
     # via
     #   napari (napari_repo/pyproject.toml)
     #   npe2
@@ -438,11 +438,11 @@ rpds-py==0.20.0
     #   referencing
 scikit-image==0.24.0
     # via napari (napari_repo/pyproject.toml)
-scipy==1.14.0
+scipy==1.14.1
     # via
     #   napari (napari_repo/pyproject.toml)
     #   scikit-image
-setuptools==72.2.0
+setuptools==73.0.1
     # via torch
 shellingham==1.5.4
     # via typer
@@ -483,7 +483,7 @@ tensorstore==0.1.64
     # via
     #   -r napari_repo/resources/constraints/version_denylist.txt
     #   napari (napari_repo/pyproject.toml)
-tifffile==2024.8.10
+tifffile==2024.8.24
     # via
     #   napari (napari_repo/pyproject.toml)
     #   scikit-image
@@ -515,7 +515,7 @@ triangle==20230923
     # via napari (napari_repo/pyproject.toml)
 triton==3.0.0
     # via torch
-typer==0.12.4
+typer==0.12.5
     # via npe2
 typing-extensions==4.12.2
     # via
