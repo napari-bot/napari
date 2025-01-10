@@ -738,7 +738,7 @@ vispy==0.14.3
     # via
     #   napari (napari_repo/pyproject.toml)
     #   napari-svg
-watchfiles==1.0.3
+watchfiles==1.0.4
     # via sphinx-autobuild
 wcwidth==0.2.13
     # via prompt-toolkit
