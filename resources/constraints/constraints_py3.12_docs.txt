@@ -582,7 +582,7 @@ scikit-learn==1.7.0
     # via
     #   glasbey
     #   nilearn
-scipy==1.15.3
+scipy==1.16.0
     # via
     #   napari (pyproject.toml)
     #   nilearn
