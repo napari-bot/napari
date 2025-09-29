@@ -305,8 +305,7 @@ jobs:
 
       - name: Run notebook
         run: |
-          cd tools
-          traceback-with-variables run_notebook.py --to notebook --execute docs/docs/howtos/extending/magicgui.ipynb
+          traceback-with-variables napari/tools/run_notebook.py --to notebook --execute docs/docs/howtos/extending/magicgui.ipynb
 
       - name: Upload executed notebook
         if: always()
