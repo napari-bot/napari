@@ -266,3 +266,47 @@ jobs:
         env:
           PR: 1  # prevents asv from running very compute-intensive benchmarks
           PIP_CONSTRAINT: ${{ github.workspace }}/resources/constraints/benchmark.txt
+
+  test_notebook:
+    name: test notebook from docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout docs repo
+        uses: actions/checkout@v5
+        with:
+          repository: napari/docs
+          ref: main
+          path: docs
+      - name: Checkout main repo
+        uses: actions/checkout@v5
+        with:
+          path: napari
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          version: "latest"
+          python-version: '3.12'
+      - name: Setup headless display
+        uses: pyvista/setup-headless-display-action@v4.2
+        with:
+          qt: true
+          wm: herbstluftwm
+      - name: Install dependencies
+        run: |
+          uv pip install --upgrade pip
+          uv pip install "napari/[pyqt5]" --group napari/pyproject.toml:docs
+          uv pip install jupyter[all]
+        env:
+          UV_CONSTRAINT: ${{ github.workspace }}/napari/resources/constraints/constraints_py3.12_docs.txt
+
+      - name: Convert notebook
+        run: mystnb-to-jupyter docs/docs/howtos/extending/magicgui.md
+
+      - name: Run notebook
+        run: jupyter nbconvert --to notebook --execute docs/docs/howtos/extending/magicgui.ipynb
+
+      - name: Upload executed notebook
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: executed-notebook
+          path: docs/docs/howtos/extending/*.ipynb
