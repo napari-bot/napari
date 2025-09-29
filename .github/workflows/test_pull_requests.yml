@@ -286,6 +286,7 @@ jobs:
         with:
           version: "latest"
           python-version: '3.12'
+          activate-environment: true
       - name: Setup headless display
         uses: pyvista/setup-headless-display-action@v4.2
         with:
