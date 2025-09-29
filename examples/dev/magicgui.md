@@ -507,7 +507,9 @@ from magicgui import magicgui
 def threshold(image: ImageData, threshold: int = 75) -> LabelsData:
     """Threshold an image and return a mask."""
     return (image > threshold).astype(int)
+```
 
+```{code-cell} python
 viewer = napari.view_image(np.random.randint(0, 100, (64, 64)))
 viewer.window.add_dock_widget(threshold)
 threshold()  # "call the widget" to call the function, so it shows in the
