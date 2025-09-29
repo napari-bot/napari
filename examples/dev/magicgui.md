@@ -511,7 +511,7 @@ def threshold(image: ImageData, threshold: int = 75) -> LabelsData:
 
 ```{code-cell} python
 viewer = napari.view_image(np.random.randint(0, 100, (64, 64)))
-viewer.add_labels(np.zeros((64, 64), dtype="uint8"), name='Initial Labels')
+viewer.add_labels(np.zeros((64, 64), dtype="int32"), name='Initial Labels')
 ```
 ```{code-cell} python
 viewer.window.add_dock_widget(threshold)
