@@ -307,6 +307,7 @@ jobs:
         run: jupyter nbconvert --to notebook --execute docs/docs/howtos/extending/magicgui.ipynb
 
       - name: Upload executed notebook
+        if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: executed-notebook
