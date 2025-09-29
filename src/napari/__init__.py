@@ -1,6 +1,7 @@
 import os
 
 from lazy_loader import attach as _attach
+from traceback_with_variables import activate_by_import
 
 from napari._check_numpy_version import limit_numpy1x_threads_on_macos_arm
 
@@ -114,3 +115,4 @@ __getattr__, __dir__, __all__ = _attach(
     __name__, submodules=_proto_all_, submod_attrs=_submod_attrs
 )
 del _attach
+del activate_by_import

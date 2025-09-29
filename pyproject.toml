@@ -72,6 +72,7 @@ dependencies = [
     "typing_extensions>=4.12",
     "vispy>=0.15.2,<0.16",
     "wrapt>=1.13.3",
+    "traceback-with-variables",
 ]
 dynamic = [
     "version",
