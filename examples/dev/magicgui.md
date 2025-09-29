@@ -511,7 +511,11 @@ def threshold(image: ImageData, threshold: int = 75) -> LabelsData:
 
 ```{code-cell} python
 viewer = napari.view_image(np.random.randint(0, 100, (64, 64)))
+```
+```{code-cell} python
 viewer.window.add_dock_widget(threshold)
+```
+```{code-cell} python
 threshold()  # "call the widget" to call the function, so it shows in the
              # screenshot below.
              # Normally this would be caused by clicking on 'Run Threshold' button
