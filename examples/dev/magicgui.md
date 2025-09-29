@@ -506,7 +506,7 @@ from magicgui import magicgui
 @magicgui(call_button='Run Threshold')
 def threshold(image: ImageData, threshold: int = 75) -> LabelsData:
     """Threshold an image and return a mask."""
-    return (image > threshold).astype("int32")
+    return (image > threshold).astype("uint8")
 ```
 
 ```{code-cell} python
