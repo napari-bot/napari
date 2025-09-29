@@ -271,16 +271,8 @@ jobs:
     name: test notebook from docs
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout docs repo
-        uses: actions/checkout@v5
-        with:
-          repository: napari/docs
-          ref: main
-          path: docs
       - name: Checkout main repo
         uses: actions/checkout@v5
-        with:
-          path: napari
       - name: Install the latest version of uv
         uses: astral-sh/setup-uv@v6
         with:
@@ -295,17 +287,17 @@ jobs:
       - name: Install dependencies
         run: |
           uv pip install --upgrade pip
-          uv pip install "napari/[pyqt5]" --group napari/pyproject.toml:docs
+          uv pip install -e ".[pyqt5]" --group docs
           uv pip install jupyter[all]
         env:
           UV_CONSTRAINT: ${{ github.workspace }}/napari/resources/constraints/constraints_py3.12_docs.txt
 
       - name: Convert notebook
-        run: mystnb-to-jupyter docs/docs/howtos/extending/magicgui.md
+        run: mystnb-to-jupyter examples/dev/magicgui.md
 
       - name: Run notebook
         run: |
-          traceback-with-variables napari/tools/run_notebook.py --to notebook --execute docs/docs/howtos/extending/magicgui.ipynb
+          traceback-with-variables tools/run_notebook.py --to notebook --execute examples/dev/magicgui.ipynb
 
       - name: Upload executed notebook
         if: always()
