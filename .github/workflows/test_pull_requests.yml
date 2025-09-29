@@ -290,7 +290,7 @@ jobs:
           uv pip install -e ".[pyqt5]" --group docs
           uv pip install jupyter[all]
         env:
-          UV_CONSTRAINT: ${{ github.workspace }}/napari/resources/constraints/constraints_py3.12_docs.txt
+          UV_CONSTRAINT: ${{ github.workspace }}/resources/constraints/constraints_py3.12_docs.txt
 
       - name: Convert notebook
         run: mystnb-to-jupyter examples/dev/magicgui.md
