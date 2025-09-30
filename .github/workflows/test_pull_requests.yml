@@ -292,6 +292,9 @@ jobs:
         env:
           UV_CONSTRAINT: ${{ github.workspace }}/resources/constraints/constraints_py3.12_docs.txt
 
+      - name: Run script
+        run: python examples/dev/magicgui_.py
+
       - name: Convert notebook
         run: mystnb-to-jupyter examples/dev/magicgui.md
 
