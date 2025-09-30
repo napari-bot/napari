@@ -298,6 +298,10 @@ jobs:
       - name: Convert notebook
         run: mystnb-to-jupyter examples/dev/magicgui.md
 
+      - name: Run small notebook
+        run: |
+          traceback-with-variables tools/run_notebook.py --to notebook --execute examples/dev/magicgui_.ipynb
+
       - name: Run notebook
         run: |
           traceback-with-variables tools/run_notebook.py --to notebook --execute examples/dev/magicgui.ipynb
