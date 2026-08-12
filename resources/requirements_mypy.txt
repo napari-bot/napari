@@ -12,7 +12,7 @@ build==1.5.0
     # via npe2
 certifi==2026.7.22
     # via requests
-charset-normalizer==3.4.9
+charset-normalizer==3.5.0
     # via requests
 docstring-parser==0.18.0
     # via magicgui
@@ -42,7 +42,7 @@ packaging==26.3
     #   qtpy
 pathspec==1.1.1
     # via mypy
-platformdirs==4.11.1
+platformdirs==4.11.2
     # via npe2
 psygnal==0.15.1
     # via
@@ -98,7 +98,7 @@ types-pyyaml==6.0.12.20260724
     # via -r resources/requirements_mypy.in
 types-requests==2.33.0.20260712
     # via -r resources/requirements_mypy.in
-types-setuptools==83.0.0.20260807
+types-setuptools==84.0.0.20260812
     # via -r resources/requirements_mypy.in
 typing-extensions==4.16.0
     # via
@@ -110,7 +110,7 @@ typing-extensions==4.16.0
     #   pydantic-extra-types
     #   superqt
     #   typing-inspection
-typing-inspection==0.4.2
+typing-inspection==0.4.4
     # via pydantic
 urllib3==2.7.0
     # via
