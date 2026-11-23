@@ -271,7 +271,7 @@ ipykernel==7.4.0
     #   myst-nb
     #   napari-console
     #   qtconsole
-ipython==9.18.1
+ipython==9.19.1
     # via
     #   napari (pyproject.toml)
     #   ipykernel
